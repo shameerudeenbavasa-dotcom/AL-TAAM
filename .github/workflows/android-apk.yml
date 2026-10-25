@@ -53,10 +53,13 @@ jobs:
         working-directory: outputs/android
         run: ./gradlew --no-daemon assembleDebug
 
+      - name: Rename APK
+        run: mv outputs/android/app/build/outputs/apk/debug/app-debug.apk outputs/android/app/build/outputs/apk/debug/AL-TAAM-EATERY.apk
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: al-taam-eatery-debug-apk
-          path: outputs/android/app/build/outputs/apk/debug/app-debug.apk
+          name: AL-TAAM-EATERY-APK
+          path: outputs/android/app/build/outputs/apk/debug/AL-TAAM-EATERY.apk
           if-no-files-found: error
           retention-days: 30
