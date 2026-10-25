@@ -1,0 +1,12 @@
+{
+  "appId": "com.altaameatery.ordering",
+  "appName": "AL TAAM EATERY",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "ios": {
+    "contentInset": "automatic"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}
